@@ -5,13 +5,14 @@ import { useEffect } from "react";
 
 export const Timer = () => {
   const [times, setTimes] = useState({});
-  const [counter, setCounter] = useState(10);
+  const [counter, setCounter] = useState();
 
   useEffect(() => {
     console.log(`render from useeffect`);
     const id = setInterval(() => {
       setCounter((p) => {
         console.log(p);
+        console.log(times.end);
         if (p === times.end) {
           clearInterval(id);
           return 0;
@@ -23,7 +24,7 @@ export const Timer = () => {
       console.log("Unmounting from useeffect");
       clearInterval(id);
     };
-  }, []);
+  }, [times]);
 
   const handleClick = (data) => {
     setTimes(data);
@@ -32,10 +33,10 @@ export const Timer = () => {
       end: +data.endTime,
     };
     setTimes(payload);
-    console.log("Times ", times);
+    setCounter(payload.start);
   };
 
-  console.log("Render");
+  // console.log("Render");
 
   return (
     <>
