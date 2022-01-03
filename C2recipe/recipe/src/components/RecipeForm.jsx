@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { Button, DivMain, DivAddRecipe, DivAllRecipe, Form } from "./styles";
+import {
+  Button,
+  DivMain,
+  DivAddRecipe,
+  DivAllRecipe,
+  Form,
+  DisplayData,
+} from "./styles";
 
 export const RecipeForm = () => {
   const [data, setData] = useState({});
@@ -119,7 +126,9 @@ export const RecipeForm = () => {
       </DivMain>
 
       {/* Displaying selected recipe */}
-      <Displaying />
+      <DisplayData>
+        <Displaying />
+      </DisplayData>
     </>
   );
 };
