@@ -2,15 +2,33 @@ import { useState } from "react";
 
 export const RecipeForm = () => {
   const [data, setData] = useState({});
-
-  //Function to Post recipe in Database
-  const addRecipe = () => {};
+  const [recipes, setRecipes] = useState([]);
 
   const handleChange = (e) => {
-    // console.log(e.target.value);
     let { name, value } = e.target;
     setData({ ...data, [name]: value });
-    console.log(data);
+  };
+
+  //Function for getting the recipe dataset
+  const getRecipe = () => {
+    fetch("http://localhost:3001/recipe")
+      .then((data) => data.json)
+      .then((res) => {
+        console.log(res);
+        setRecipes(res);
+      });
+  };
+
+  //Function to Post recipe in Database
+  const addRecipe = (e) => {
+    e.preventDefault();
+    console.log("final data to add in db:", data);
+
+    fetch("http://localhost:3001/recipe", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "content-type": "application/json" },
+    });
   };
 
   return (
