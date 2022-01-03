@@ -2,53 +2,35 @@
   "recipe": [
     {
       "title": "Biryani",
-      "ingredients": "chicken,rice",
-      "time": "500",
-      "instructions": "Add water only",
+      "ingredients": "Rice,Chicken",
+      "time": "120",
+      "instructions": "Add water",
+      "image": "https://foodish-api.herokuapp.com/images/biryani/biryani73.jpg",
       "id": 1
     },
     {
       "title": "Pulao",
-      "ingredients": "rice",
+      "ingredients": "Rice",
       "time": "60",
-      "instructions": "Add water only",
+      "instructions": "Add water",
+      "image": "https://foodish-api.herokuapp.com/images/idly/idly36.jpg",
       "id": 2
     },
     {
-      "title": "Chicken Handi",
-      "ingredients": "Chicken, dahi",
-      "time": "120",
-      "instructions": "Add dahi",
-      "id": 3
-    },
-    {
-      "title": "Chicken Dakbunglow",
-      "ingredients": "Chicken, dahi",
-      "time": "120",
-      "instructions": "Add dahi",
-      "id": 4
-    },
-    {
-      "title": "Chicken Keema",
-      "ingredients": "masala",
-      "time": "180",
-      "instructions": "Add a seekh",
-      "id": 5
-    },
-    {
+      "title": "Idli",
+      "ingredients": "Rice bits",
+      "time": "60",
       "instructions": "Add water",
-      "title": "Luchi",
-      "ingredients": "maida",
-      "time": "10",
-      "id": 6
+      "image": "https://foodish-api.herokuapp.com/images/idly/idly20.jpg",
+      "id": 3
     },
     {
       "title": "water",
       "ingredients": "water",
-      "time": "10",
-      "instructions": "water",
-      "image": "https://foodish-api.herokuapp.com/images/rice/rice18.jpg",
-      "id": 8
+      "time": "0",
+      "instructions": "Add water ",
+      "image": "https://foodish-api.herokuapp.com/images/dosa/dosa60.jpg",
+      "id": 4
     }
   ]
 }
