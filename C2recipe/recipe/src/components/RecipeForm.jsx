@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Button, DivMain, DivAddRecipe, DivAllRecipe } from "./styles";
 
 export const RecipeForm = () => {
   const [data, setData] = useState({});
@@ -55,59 +56,63 @@ export const RecipeForm = () => {
 
   return (
     <>
-      <h3>Add your recipe</h3>
-      <form>
-        <label>Title</label>
-        <input
-          type="text"
-          name="title"
-          placeholder="Add your recipe"
-          onChange={handleChange}
-        />
-        <br />
-        <label>Ingredients</label>
-        <input
-          type="text"
-          name="ingredients"
-          placeholder="Add your ingredients"
-          onChange={handleChange}
-        />
-        <br />
-        <label>Cooking Time (in minutes)</label>
-        <input
-          type="number"
-          name="time"
-          placeholder="Cooking time?"
-          onChange={handleChange}
-        />
-        <br />
-        <label>Instructions</label>
-        <input
-          type="text"
-          name="instructions"
-          placeholder="Add instructions"
-          onChange={handleChange}
-        />
-        <br />
-        <button onClick={addRecipe}>Add Recipe</button>
-      </form>
+      <DivMain>
+        <DivAddRecipe>
+          <h3>Add your recipe</h3>
+          <form>
+            <label>Title</label>
+            <input
+              type="text"
+              name="title"
+              placeholder="Add your recipe"
+              onChange={handleChange}
+            />
+            <br />
+            <label>Ingredients</label>
+            <input
+              type="text"
+              name="ingredients"
+              placeholder="Add your ingredients"
+              onChange={handleChange}
+            />
+            <br />
+            <label>Cooking Time (in minutes)</label>
+            <input
+              type="number"
+              name="time"
+              placeholder="Cooking time?"
+              onChange={handleChange}
+            />
+            <br />
+            <label>Instructions</label>
+            <input
+              type="text"
+              name="instructions"
+              placeholder="Add instructions"
+              onChange={handleChange}
+            />
+            <br />
+            <Button onClick={addRecipe}>Add Recipe</Button>
+          </form>
+        </DivAddRecipe>
 
-      {/* Displaying all recipe */}
-      <div className="display">
-        {recipes.map((e, i) => (
-          <>
-            <div
-              onClick={() => {
-                setRecipe(e);
-              }}
-            >
-              <div key={i}>Title: {e.title} </div>
-              <div>Cooking time: {e.time} mins</div>
-              <hr></hr>
-            </div>
-          </>
-        ))}
-      </div>
+        <DivAllRecipe>
+          {/* Displaying all recipe */}
+          {recipes.map((e, i) => (
+            <>
+              <div
+                onClick={() => {
+                  setRecipe(e);
+                }}
+              >
+                <div key={i}>Title: {e.title} </div>
+                <div>Cooking time: {e.time} mins</div>
+                <hr></hr>
+              </div>
+            </>
+          ))}
+        </DivAllRecipe>
+      </DivMain>
 
       {/* Displaying selected recipe */}
       <Displaying />
