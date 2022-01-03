@@ -38,15 +38,16 @@ export const RecipeForm = () => {
   const addRecipe = (e) => {
     e.preventDefault();
     let payload;
+    console.log(data);
     fetch("https://foodish-api.herokuapp.com/api")
       .then((data) => data.json())
       .then((result) => {
         let imageUrl = result.image;
-        payload = { ...data, imageUrl: imageUrl };
+        payload = { ...data, imageUrl: `${imageUrl}` };
       });
     fetch("http://localhost:3001/recipe", {
       method: "POST",
-      body: JSON.stringify(payload),
+      body: JSON.stringify(data),
       headers: { "content-type": "application/json" },
     }).then(() => {
       getRecipe();
