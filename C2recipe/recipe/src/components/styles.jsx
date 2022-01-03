@@ -8,17 +8,29 @@ export const Button = styled.button`
 `;
 
 export const DivMain = styled.div`
-  border: 1px solid gray;
-
+  border: 5px solid gray;
   margin: auto;
   display: flex;
-  gap: 50px;
+  gap: 20px;
 `;
 
 export const DivAddRecipe = styled.div`
-  border: 1px solid gray;
+  border-right: 1px solid gray;
+  width: 50%;
+  margin: 20px;
 `;
 
 export const DivAllRecipe = styled.div`
   border: 1px solid pink;
+  width: 50%;
+  margin: 20px;
+  cursor: pointer;
+`;
+
+export const Form = styled.form`
+  border: 1px solid gray;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
