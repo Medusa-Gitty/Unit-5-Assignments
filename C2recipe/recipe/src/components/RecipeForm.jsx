@@ -3,8 +3,14 @@ import { useState } from "react";
 export const RecipeForm = () => {
   const [data, setData] = useState({});
 
+  //Function to Post recipe in Database
+  const addRecipe = () => {};
+
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
+    let { name, value } = e.target;
+    setData({ ...data, [name]: value });
+    console.log(data);
   };
 
   return (
@@ -35,6 +41,7 @@ export const RecipeForm = () => {
           placeholder="Add instructions"
           onChange={handleChange}
         />
+        <button onClick={addRecipe}>Add Recipe</button>
       </form>
     </>
   );
