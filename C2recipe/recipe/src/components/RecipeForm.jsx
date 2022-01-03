@@ -7,6 +7,7 @@ import {
   DivAllRecipe,
   Form,
   DisplayData,
+  Img,
 } from "./styles";
 
 export const RecipeForm = () => {
@@ -37,17 +38,22 @@ export const RecipeForm = () => {
   //Function to Post recipe in Database
   const addRecipe = (e) => {
     e.preventDefault();
-    let payload;
-    console.log(data);
+
+    let payload = { ...data };
     fetch("https://foodish-api.herokuapp.com/api")
       .then((data) => data.json())
       .then((result) => {
         let imageUrl = result.image;
-        payload = { ...data, imageUrl: `${imageUrl}` };
+        payload = { ...payload, image: imageUrl };
+        appendPayload(payload);
       });
+  };
+
+  const appendPayload = (payload) => {
+    console.log(payload);
     fetch("http://localhost:3001/recipe", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: JSON.stringify(payload),
       headers: { "content-type": "application/json" },
     }).then(() => {
       getRecipe();
@@ -62,6 +68,7 @@ export const RecipeForm = () => {
           <div>Ingredient : {recipe.ingredients}</div>
           <div>Cooking time : {recipe.time}</div>
           <div>Instrucions: {recipe.instructions}</div>
+          <Img src={recipe.image} alt="#" />
         </>
       );
     } else {

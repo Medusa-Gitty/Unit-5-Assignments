@@ -42,3 +42,8 @@ export const DisplayData = styled.div`
   border-bottom: 5px solid gray;
   padding: 50px;
 `;
+
+export const Img = styled.img`
+  width: 300px;
+  height: 250px;
+`;
