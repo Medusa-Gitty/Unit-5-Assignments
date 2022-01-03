@@ -1,38 +1,38 @@
 {
   "recipe": [
     {
-      "title": "a",
-      "ingredients": "a",
-      "time": "1",
-      "instructions": "a",
+      "title": "Biryani",
+      "ingredients": "chicken,rice",
+      "time": "500",
+      "instructions": "Add water only",
       "id": 1
     },
     {
-      "title": "aa",
-      "ingredients": "axa",
-      "time": "14",
-      "instructions": "aasd",
+      "title": "Pulao",
+      "ingredients": "rice",
+      "time": "60",
+      "instructions": "Add water only",
       "id": 2
     },
     {
-      "title": "aasdf",
-      "ingredients": "axadsa",
-      "time": "1454",
-      "instructions": "aasddsa",
+      "title": "Chicken Handi",
+      "ingredients": "Chicken, dahi",
+      "time": "120",
+      "instructions": "Add dahi",
       "id": 3
     },
     {
-      "title": "24",
-      "ingredients": "6",
-      "instructions": "fds",
-      "time": "55",
+      "title": "Chicken Dakbunglow",
+      "ingredients": "Chicken, dahi",
+      "time": "120",
+      "instructions": "Add dahi",
       "id": 4
     },
     {
-      "title": "424",
-      "ingredients": "423",
-      "instructions": "464",
-      "time": "6456",
+      "title": "Chicken Keema",
+      "ingredients": "masala",
+      "time": "180",
+      "instructions": "Add a seekh",
       "id": 5
     }
   ]
