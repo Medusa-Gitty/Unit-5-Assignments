@@ -14,7 +14,7 @@ export const Navbar = () => {
           toggleAuth();
         }}
       >
-        Toggle
+        {!isAuth ? "Log In" : "Log out"}
       </button>
     </div>
   );
