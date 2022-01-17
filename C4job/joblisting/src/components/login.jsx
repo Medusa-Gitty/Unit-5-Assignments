@@ -9,6 +9,7 @@ export const Login = () => {
   const handleChange = (e) => {
     let { name, value } = e.target;
     setLogin({ ...login, [name]: value });
+    console.log(login);
   };
 
   const handleSubmit = (e) => {
