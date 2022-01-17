@@ -1,6 +1,6 @@
-import { ADD_JOB, DELETE_JOB } from "./actionType";
+import { ADD_JOB, DELETE_JOB, LOGIN_SUCCESS, LOGIN_FAILED } from "./actionType";
 
-const initialState = { jobs: [] };
+const initialState = { jobs: [], login: {}, auth: false, toggle: false };
 
 // const reducer = (state = initialState, { type, payload }) => {
 //   switch (type) {
@@ -26,6 +26,19 @@ const reducer = (state = initialState, action) => {
       //   data: [...state.jobs, data],
       // };
       return { ...state, jobs: [...state.jobs, data] };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        auth: true,
+        login: state.login,
+        toggle: state.toggle === false ? true : false,
+      };
+
+    case LOGIN_FAILED:
+      return {
+        ...state,
+        auth: false,
+      };
     default:
       return state;
   }
