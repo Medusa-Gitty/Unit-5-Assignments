@@ -1,10 +1,10 @@
 import "./App.css";
-import { Admin } from "./components/Admin";
+import { AdminInput } from "./components/adminInput";
 
 function App() {
   return (
     <div className="App">
-      <Admin />
+      <AdminInput />
     </div>
   );
 }
