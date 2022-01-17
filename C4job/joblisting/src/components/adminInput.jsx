@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addJob, deleteJob } from "../redux/action";
 
 export const AdminInput = () => {
   const [data, setData] = useState({});
@@ -8,7 +9,7 @@ export const AdminInput = () => {
   const handleChange = (e) => {
     let { name, value } = e.target;
     setData({ ...data, [name]: value });
-    console.log(data);
+    // console.log(data);
   };
 
   return (
@@ -49,7 +50,13 @@ export const AdminInput = () => {
         name="max"
         onChange={handleChange}
       />
-      <button onClick={() => {}}>ADD JOB</button>
+      <button
+        onClick={() => {
+          dispatch(addJob(data));
+        }}
+      >
+        ADD JOB
+      </button>
     </>
   );
 };

@@ -1,9 +1,12 @@
 import { ADD_JOB, DELETE_JOB } from "./actionType";
 
 const addJob = (data) => {
+  // console.log(data);
   return {
     type: ADD_JOB,
-    payload: data,
+    payload: {
+      data,
+    },
   };
 };
 
