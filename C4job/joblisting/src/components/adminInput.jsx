@@ -14,6 +14,7 @@ export const AdminInput = () => {
 
   return (
     <>
+      <h1>Admin Panel</h1>
       <input
         type="text"
         placeholder="Company"

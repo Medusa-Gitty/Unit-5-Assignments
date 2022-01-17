@@ -9,10 +9,10 @@ export const AdminList = () => {
       <hr />
       {jobs.map((e) => (
         <div>
-          <h2>{e.company}</h2>
-          <h4>{e.title}</h4>
-          <p>{e.description}</p>
-          <p>{e.locaton}</p>
+          <h2>Company: {e.company}</h2>
+          <h4>Job Title: {e.title}</h4>
+          <p>Description: {e.description}</p>
+          <p>Location: {e.locaton}</p>
           <div>
             Salary {e.min} -- {e.max}
           </div>
